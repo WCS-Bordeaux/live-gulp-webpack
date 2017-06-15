@@ -1,5 +1,10 @@
 'use strict'
 
+// ici se trouve une configuration pour le dev uniquement
+// si vous voulez utiliser ce fichier également dans un contexte de production
+// il va falloir élargir les capacités
+// on pourrai créer une tache 'production' qui ferai les minification etc...
+
 import os from 'os'
 import gulp from 'gulp'
 import sass from 'gulp-sass'
@@ -68,4 +73,5 @@ gulp.task('dev', ['html', 'sass', 'babel', 'server'])
 
 // à vous de faire la tache 'prod' qui va uglify, concat, ... tout ce qui optimise la production
 // lance la tache 'dev' par défaut
+
 gulp.task('default', ['dev'], onInit)
